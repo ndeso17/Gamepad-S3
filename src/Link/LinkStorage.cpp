@@ -1,3 +1,5 @@
+#include "../../Config.h"
+#if ENABLE_LINK
 #include "LinkStorage.h"
 #include <Preferences.h>
 #include <cstring>
@@ -46,3 +48,5 @@ bool unbindCarLink() {
 }
 
 }  // namespace GamepadLink
+
+#endif

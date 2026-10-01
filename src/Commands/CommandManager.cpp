@@ -6,6 +6,7 @@
 #include "../Modules/RawMonitor.h"
 #include "CommandManager.h"
 #include "../Network/NetworkManager.h"
+#include "../Link/LinkManager.h"
 
 void printHelp() {
   separator();
@@ -33,6 +34,9 @@ void printHelp() {
 #endif
 #if ENABLE_CONFIG_COMMAND
   printConfigHelp();
+#endif
+#if ENABLE_LINK
+  GamepadLink::printLinkHelp();
 #endif
   Serial.println("help");
 }
@@ -66,6 +70,9 @@ void processSerial() {
 #endif
 #if ENABLE_CONFIG_COMMAND
   if (processConfigCommand(command)) return;
+#endif
+#if ENABLE_LINK
+  if (GamepadLink::processLinkCommand(command)) return;
 #endif
   if (lower == "help") { printHelp(); return; }
   Serial.println();

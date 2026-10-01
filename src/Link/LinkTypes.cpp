@@ -1,3 +1,5 @@
+#include "../../Config.h"
+#if ENABLE_LINK
 #include "LinkTypes.h"
 
 namespace GamepadLink {
@@ -80,3 +82,5 @@ void ctrlNeutral(CtrlPacket &p) {
 }
 
 }  // namespace GamepadLink
+
+#endif

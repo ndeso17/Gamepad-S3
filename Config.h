@@ -24,6 +24,12 @@
 #ifndef ENABLE_NETWORK
 #define ENABLE_NETWORK 1
 #endif
+#ifndef ENABLE_LINK
+#define ENABLE_LINK 0
+#endif
+#ifndef ENABLE_LINK_ESP_NOW
+#define ENABLE_LINK_ESP_NOW 0
+#endif
 #ifndef ENABLE_BUTTON
 #define ENABLE_BUTTON 0
 #endif
